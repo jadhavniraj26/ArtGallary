@@ -1,5 +1,6 @@
 <?php
 include 'conn.php';
+require_once('header.php');
 
 // Fetch data from the "pencil" table
 $sql = "SELECT * FROM canvas";
@@ -52,7 +53,7 @@ mysqli_close($conn);
 </head>
 <body>
 <div class="container">
-    <h2 class="my-4">Pencil Sketches</h2>
+    <h2 class="my-4">Canvas Paintings</h2>
     <div class="box-card">
       <div class="row">
 

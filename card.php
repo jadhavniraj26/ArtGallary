@@ -1,5 +1,6 @@
 <?php
 include 'conn.php';
+require_once('header.php');
 
 // Fetch data from the "pencil" table
 $sql = "SELECT * FROM pencil";
@@ -79,7 +80,7 @@ while ($row = mysqli_fetch_assoc($result)) {
        
       </div>
       <div class="text-center mt-3">
-      <a href="http://localhost/new/allpencil.php"><button class="btn btn-primary" id="showMoreBtn">Show More</button></a>
+      <a href="http://localhost/final/allpencil.php"><button class="btn btn-primary" id="showMoreBtn">Show More</button></a>
     </div>
     </div>
     <?php
@@ -144,7 +145,7 @@ while ($row2 = mysqli_fetch_assoc($result2)) {
 }
 ?>
 <div class="container">
-    <h2 class="my-4">Canvas Sketches</h2>
+    <h2 class="my-4">Canvas Paintings</h2>
     <div class="box-card">
       <div class="row">
         <?php $count = 0; ?>
@@ -191,7 +192,7 @@ while ($row3 = mysqli_fetch_assoc($result3)) {
 }
 ?>
 <div class="container">
-    <h2 class="my-4">Nature Sketches</h2>
+    <h2 class="my-4">Nature Paintings</h2>
     <div class="box-card">
       <div class="row">
         <?php $count = 0; ?>

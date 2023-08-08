@@ -1,5 +1,6 @@
 <?php
 include 'conn.php';
+require_once('header.php');
 
 // Fetch data from the "pencil" table
 $sql = "SELECT * FROM pencil";
