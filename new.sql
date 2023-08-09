@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 08, 2023 at 06:13 PM
+-- Generation Time: Aug 09, 2023 at 07:45 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -40,10 +40,7 @@ CREATE TABLE `acrylic` (
 --
 
 INSERT INTO `acrylic` (`id`, `name`, `price`, `photo`, `feature`) VALUES
-(123, 'a1', '2000', 'wew', 'osm'),
-(1, 'sketch 1', '1500', 'upload/download.jpg', '1234'),
-(2, 'sketch 3', '1500', 'upload/ac3.jpg', 'Osm Looking'),
-(6, 'sketch 4', '1500', 'upload/ac3.jpg', 'Looking Good');
+(1, 'Sketch 1', '2000', 'upload/ac1.jpg', 'Good');
 
 -- --------------------------------------------------------
 
@@ -64,11 +61,7 @@ CREATE TABLE `canvas` (
 --
 
 INSERT INTO `canvas` (`id`, `name`, `price`, `photo`, `feature`) VALUES
-(1, 'sketch 1', '2000', 'upload/canvas.jpeg', 'good'),
-(1, 'sketch 2', '2000', 'upload/canvas5.jpg', 'Good Looking'),
-(6, 'sketch 4', '2000', 'upload/canvas4.jpg', 'Good'),
-(4, 'sketch 7', '4000', 'upload/canvas2.jpg', 'look osm'),
-(4, 'image', '3000', 'upload/canvas.jpeg', 'fabulous work');
+(4, 'sketch 4', '2000', 'upload/canvas3.jpg', 'Nice and good');
 
 -- --------------------------------------------------------
 
@@ -89,8 +82,7 @@ CREATE TABLE `nature` (
 --
 
 INSERT INTO `nature` (`id`, `name`, `price`, `photo`, `feature`) VALUES
-(1, 'image', '3000', 'upload/n3.jpg', 'good'),
-(2, 'sketch 4', '3000', 'upload/n1.jpg', 'good');
+(0, 'sketch 2', '2300', 'upload/n2.jpg', 'looks Good');
 
 -- --------------------------------------------------------
 
@@ -111,13 +103,53 @@ CREATE TABLE `pencil` (
 --
 
 INSERT INTO `pencil` (`id`, `name`, `price`, `photo`, `feature`) VALUES
-(1, 'sketch 1', '2000', 'upload/Portrait-Pencil-Sketch-The-Smoking-Woman (1).jpg', 'Osm Detailing'),
-(2, 'Eye Sketch', '1500', 'upload/eye.jpg', 'Proper, Real Like eyes'),
-(3, 'M. S. Dhoni Sketch', '2000', 'upload/dhoni.jpg', 'plain Sketch'),
-(4, 'Eye Sketch 2', '5000', 'upload/eye1.jpg', 'Real Like Eyes '),
-(5, 'Pen Sketch', '1000', 'upload/930d5cc3be09a6a9cd824db0265e03db.jpg', 'Looking real'),
-(3, 'sanket', '100', 'upload/Portrait-Pencil-Sketch-The-Smoking-Woman (1).jpg', 'osm'),
-(6, 'image', '1234', 'upload/dhoni.jpg', 'qwe');
+(1, 'M.S. Dhoni Sketch', '2000', 'upload/dhoni.jpg', 'Looking Osm'),
+(2, 'Sketch 2', '1500', 'upload/eye1.jpg', 'Eye Sketch , Look like a real...'),
+(3, 'Sketch 3', '1000', 'upload/930d5cc3be09a6a9cd824db0265e03db.jpg', 'Looking Good');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `acrylic`
+--
+ALTER TABLE `acrylic`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `canvas`
+--
+ALTER TABLE `canvas`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `pencil`
+--
+ALTER TABLE `pencil`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `acrylic`
+--
+ALTER TABLE `acrylic`
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `canvas`
+--
+ALTER TABLE `canvas`
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `pencil`
+--
+ALTER TABLE `pencil`
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

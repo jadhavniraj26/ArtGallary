@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,9 +8,7 @@
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <style>
     /* Optional custom CSS styles */
-    body {
-      padding: 20px;
-    }
+    
     .form-group {
       margin-bottom: 20px;
     }
@@ -19,13 +18,12 @@
   </style>
 </head>
 <body>
+<?php
+require_once ('adminheader.php');
+?>
   <div class="container">
     <h2 class="my-4">Product Form</h2>
     <form method="post" enctype="multipart/form-data">
-      <div class="form-group">
-        <label for="productID">ID:</label>
-        <input type="text" class="form-control" id="productID" name="productID" required>
-      </div>
       <div class="form-group">
     <label for="productFeature">Type of Sketch</label>
     <select class="form-control" id="type" name="type" required>
@@ -75,7 +73,6 @@ include 'conn.php';
 if(isset($_POST['submit'])){
 
   // Get data from the Form
-  $id = $_POST['productID'];
   $name = $_POST['productName'];
   $price = $_POST['productPrice'];
   $image = $_FILES['productPhoto'];
@@ -92,7 +89,7 @@ if(isset($_POST['submit'])){
     if($type=='Pencil'){
 
     // Use $destfile instead of $image in the INSERT query to store the file path in the database
-    $insertquery = "INSERT INTO `pencil` (`id`, `name`, `price`, `photo`, `feature`) VALUES ('$id', '$name', '$price', '$destfile', '$feature');";
+    $insertquery = "INSERT INTO `pencil` (`name`, `price`, `photo`, `feature`) VALUES ('$name', '$price', '$destfile', '$feature');";
     $res = mysqli_query($conn, $insertquery);
 
     if($res){
@@ -103,7 +100,7 @@ if(isset($_POST['submit'])){
 }
    if($type=='Acrylic')
   {   
-    $insertquery="INSERT INTO `acrylic` (`id`, `name`, `price`, `photo`, `feature`) VALUES ('$id', '$name', '$price', '$destfile', '$feature');";
+    $insertquery="INSERT INTO `acrylic` (`name`, `price`, `photo`, `feature`) VALUES ('$name', '$price', '$destfile', '$feature');";
     $res = mysqli_query($conn, $insertquery);
 
     if($res){
@@ -114,7 +111,7 @@ if(isset($_POST['submit'])){
  }
  if($type=='Canvas')
  {   
-   $insertquery="INSERT INTO `canvas` (`id`, `name`, `price`, `photo`, `feature`) VALUES ('$id', '$name', '$price', '$destfile', '$feature');";
+   $insertquery="INSERT INTO `canvas` (`name`, `price`, `photo`, `feature`) VALUES ('$name', '$price', '$destfile', '$feature');";
    $res = mysqli_query($conn, $insertquery);
 
    if($res){
@@ -125,7 +122,7 @@ if(isset($_POST['submit'])){
 }
 if($type=='Nature')
  {   
-   $insertquery="INSERT INTO `nature` (`id`, `name`, `price`, `photo`, `feature`) VALUES ('$id', '$name', '$price', '$destfile', '$feature');";
+   $insertquery="INSERT INTO `nature` (`name`, `price`, `photo`, `feature`) VALUES ('$name', '$price', '$destfile', '$feature');";
    $res = mysqli_query($conn, $insertquery);
 
    if($res){
@@ -133,9 +130,6 @@ if($type=='Nature')
    } else {
      echo '<script>swal("Oops!", "Something went wrong, Retry Again!", "error");</script>';
    }
-}
-else{
-    echo "wrong"; 
 }
 }
   }
