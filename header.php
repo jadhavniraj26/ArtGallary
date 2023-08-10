@@ -7,7 +7,6 @@
     <!-- Add Bootstrap CSS link -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-        /* Custom styles */
         .navbar {
             background-color: #2a3f54;
         }
@@ -49,15 +48,11 @@
                         <a class="dropdown-item" href="http://localhost/final/canvas.php">Canvas Paintings</a>
                     </div>
                 </li>
+                    
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Artists</a>
+                        <a class="nav-link" href="http://localhost/final/addproduct.php">Admin</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Events</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
-                    </li>
+                    
                 </ul>
             </div>
         </div>

@@ -1,6 +1,5 @@
 <?php
 include 'conn.php';
-require_once('header.php');
 
 // Fetch data from the "pencil" table
 $sql = "SELECT * FROM nature";
@@ -52,6 +51,9 @@ mysqli_close($conn);
   </style>
 </head>
 <body>
+  <?php
+  require_once('header.php');
+?>
 <div class="container">
     <h2 class="my-4">Nature Paintings</h2>
     <div class="box-card">

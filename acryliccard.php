@@ -1,6 +1,5 @@
 <?php
 include 'conn.php';
-require_once('header.php');
 
 
 // Fetch data from the "pencil" table
@@ -54,6 +53,8 @@ while ($row = mysqli_fetch_assoc($result)) {
 </head>
 <body>
     <?php
+require_once('header.php');
+
 
 
     

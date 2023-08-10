@@ -2,11 +2,12 @@
 <?php
 require_once 'conn.php';
 
-if (isset($_GET['id'])) {
+if (isset($_GET['id']) && isset($_GET['sketchType'])) {
     $id = $_GET['id'];
+    $sketchType = $_GET['sketchType'];
     
-    // Fetch data based on ID
-    $sql = "SELECT * from canvas WHERE id = $id";
+    // Fetch data based on ID and sketch type
+    $sql = "SELECT * FROM $sketchType WHERE id = $id";
     $result = $conn->query($sql);
     $row = $result->fetch_assoc();
 }
@@ -27,10 +28,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $destfile = 'upload/' . $filename;
         move_uploaded_file($filepath, $destfile);
 
-        $updateSql = "UPDATE canvas SET name = '$newName', feature = '$newfeature', price='$newPrice', photo='$destfile' WHERE id = $id";
+        // Update data based on ID and sketch type
+        $updateSql = "UPDATE $sketchType SET name = '$newName', feature = '$newfeature', price='$newPrice', photo='$destfile' WHERE id = $id";
         if ($conn->query($updateSql) === TRUE) {
-            echo '<script>swal("Good job!", "Successfully Updated !", "success");</script>';
-            header("Location:sketchdetail.php");
+            echo '<script>swal("Good job!", "Successfully Updated!", "success");</script>';
+            header("Location: sketchdetail.php?sketchType=$sketchType");
 
         } else {
             echo '<script>swal("Oops!", "Something went wrong, Retry Again!", "error");</script>';
@@ -40,7 +42,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -50,6 +51,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 
 <body>
+    <?php
+    require_once('adminheader.php');
+
+    ?>
     <div class="container">
         <h2>Edit Item</h2>
         <form method="post" enctype="multipart/form-data">

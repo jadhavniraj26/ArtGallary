@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Pages Example with PHP</title>
+    <!-- Include Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Include your custom CSS if needed -->
+    <style>
+        /* Custom styles */
+    </style>
+</head>
+<body>
+    <!-- Navbar and Dropdown -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <!-- Navbar content -->
+    </nav>
+
+    <!-- Dropdown to Select Dynamic Content -->
+    <div class="container mt-5">
+        <div class="form-group">
+            <label for="sketchDropdown">Select Type of Sketch:</label>
+            <select class="form-control" id="sketchDropdown">
+                <option value="pencil">Pencil Sketch</option>
+                <option value="acrylic">Acrylic Sketch</option>
+                <option value="nature">Nature Paintings</option>
+                <option value="canvas">Canvas Paintings</option>
+            </select>
+        </div>
+    </div>
+    <!-- Container to Display Dynamic Content -->
+    <div class="container mt-4" id="dynamicContainer">
+        <!-- Content will be dynamically loaded here -->
+    </div>
+
+    <!-- Add Bootstrap JS scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Include your custom JavaScript -->
+    <script src="custom.js"></script>
+</body>
+</html>
