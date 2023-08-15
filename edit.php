@@ -112,5 +112,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <button type="submit" class="btn btn-primary">Update</button>
         </form>
     </div>
+    <?php require_once('footer.php') ?>
 </body>
 </html>

@@ -143,7 +143,7 @@ function sendOTP($email2, $otp1) {
   ob_end_flush();
   ?>
  
-
+ <?php require_once('footer.php') ?>
 
 </body>
 </html>

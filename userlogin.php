@@ -79,7 +79,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     .login-container {
       max-width: 400px;
       margin: 0 auto;
-      margin-top: 70px;
+      margin-top: 50px;
+      margin-bottom: 50px;
       padding: 20px;
       border-radius: 10px;
       background-color: #fff;
@@ -139,6 +140,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <?php require_once('footer.php') ?>
   
 </body>
 

@@ -98,8 +98,9 @@ while ($row1 = mysqli_fetch_assoc($result1)) {
     
       
     </div>
+   </div>
 
     
-    
+    <?php require_once('footer.php') ?>
 </body>
 </html>

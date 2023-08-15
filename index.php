@@ -86,6 +86,7 @@ while ($row = mysqli_fetch_assoc($result)) {
       <a href="allpencil.php"><button class="btn btn-primary" id="showMoreBtn">Show More</button></a>
     </div>
     </div>
+    </div>
     <?php
 
 
@@ -132,6 +133,7 @@ while ($row1 = mysqli_fetch_assoc($result1)) {
       <a href="acryliccard.php"><button class="btn btn-primary" id="showMoreBtn">Show More</button></a>
     </div>
     </div>
+    </div>
     <?php
 
 
@@ -176,6 +178,7 @@ while ($row2 = mysqli_fetch_assoc($result2)) {
       </div>
       <div class="text-center mt-3">
       <a href="canvas.php"><button class="btn btn-primary" id="showMoreBtn">Show More</button></a>
+    </div>
     </div>
     </div>
 
@@ -225,5 +228,8 @@ while ($row3 = mysqli_fetch_assoc($result3)) {
       <a href="nature.php"><button class="btn btn-primary" id="showMoreBtn">Show More</button></a>
     </div>
     </div>
+  </div>
+  <?php require_once('footer.php') ?>
+    
 </body>
 </html>

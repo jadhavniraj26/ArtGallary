@@ -10,6 +10,9 @@
     <style>
         .navbar {
             background-color: #2a3f54;
+            position: sticky;
+         top: 0;
+        z-index: 1000;
         }
         .navbar-brand {
             color: #fff;

@@ -81,6 +81,8 @@ mysqli_close($conn);
        
       </div>
     </div>
+  </div>
+  <?php require_once('footer.php') ?>
     
     
 </body>

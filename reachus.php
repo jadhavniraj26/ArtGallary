@@ -9,12 +9,15 @@
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
-    
+    body{
+      background-color: #f8f9fa;
+
+    }
     .login-container {
-      max-width: 600px;
+      max-width: 500px;
       margin: 0 auto;
       margin-top: 40px;
-      margin-bottom: 90px;
+      margin-bottom: 40px;
 
       padding: 20px;
       border-radius: 10px;
@@ -54,7 +57,7 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-  
+  <?php require_once('footer.php') ?>
 </body>
 </html>
 <?php
