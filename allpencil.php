@@ -55,18 +55,18 @@ mysqli_close($conn);
   require_once('header.php');
 ?>
 <div class="container">
-    <h2 class="my-4">Pencil Sketches</h2>
+    <h2 class="my-4">Acrylic Sketches</h2>
     <div class="box-card">
       <div class="row">
-
-        <?php foreach ($pencils as $pencil) { ?>
+        
+        <?php foreach ($pencils as $acc) { ?>
           <div class="col-md-3 mb-4">
             <div class="card">
-              <img src="<?php echo $pencil['photo']; ?>" class="card-img-top" alt="Product Photo">
+              <img src="<?php echo $acc['photo']; ?>" class="card-img-top" alt="Product Photo">
               <div class="card-body">
-                <h5 class="card-title"><?php echo $pencil['name']; ?></h5>
-                <p class="card-text"><?php echo $pencil['feature']; ?></p>
-                <p class="card-text">Price: $<?php echo $pencil['price']; ?></p>
+                <h5 class="card-title"><?php echo $acc['name']; ?></h5>
+                <p class="card-text"><?php echo $acc['feature']; ?></p>
+                <p class="card-text">Price: $<?php echo $acc['price']; ?></p>
                 <div class="card-buttons">
                   <button class="add-to-cart-btn">Add to Cart</button>
                   <button class="whishlist-btn">Add to Wishlist</button>
@@ -76,10 +76,12 @@ mysqli_close($conn);
             </div>
           </div>
           
-        <?php } ?>
+          <?php } ?>
           
-       
+      
       </div>
+    
+      
     </div>
     
     

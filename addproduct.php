@@ -8,6 +8,17 @@
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <style>
     /* Optional custom CSS styles */
+    .container1
+    {
+      max-width: 600px;
+      margin: 0 auto;
+      margin-top: 40px;
+      margin-bottom:90px;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #fff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
     
     .form-group {
       margin-bottom: 20px;
@@ -21,7 +32,7 @@
 <?php
 require_once ('adminheader.php');
 ?>
-  <div class="container">
+  <div class="container1">
     <h2 class="my-4">Product Form</h2>
     <form method="post" enctype="multipart/form-data">
       <div class="form-group">

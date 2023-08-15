@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sanis Art Gallery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Add Bootstrap CSS link -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
     <style>
         .navbar {
             background-color: #2a3f54;
@@ -48,10 +49,30 @@
                         <a class="dropdown-item" href="http://localhost/final/canvas.php">Canvas Paintings</a>
                     </div>
                 </li>
+                <li class="nav-item">
+                        <a class="nav-link" href="http://localhost/final/reachus.php"><i class="fa fa-contact" style="font-size:30px;color:red"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://localhost/final/reachus.php"><i class="fa fa-address-book" style="font-size:30px;color:red"></i>
+</a>
+                    </li>
+                    
                     
                     <li class="nav-item">
-                        <a class="nav-link" href="http://localhost/final/addproduct.php">Admin</a>
+                        <a class="nav-link" href="#"><i class="fa fa-shopping-cart" style="font-size:30px;color:red"></i>
+</a>
                     </li>
+                    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="sketchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user" style="font-size:30px;color:red"></i>
+</a>
+                        <div class="dropdown-menu" aria-labelledby="sketchDropdown">
+                        <a class="dropdown-item" href="http://localhost/final/userlogin.php">User Login</a>
+                        <a class="dropdown-item" href="http://localhost/final/addproduct.php">Admin Login</a>
+                        </div>
+                </li>
+                    
+                   
+                    
                     
                 </ul>
             </div>

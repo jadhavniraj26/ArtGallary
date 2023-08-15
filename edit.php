@@ -37,9 +37,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } else {
             echo '<script>swal("Oops!", "Something went wrong, Retry Again!", "error");</script>';
         }
-    } else {
-        echo "Error uploading file.";
     }
+    else {
+        // No new file uploaded, use the existing photo path
+        $destfile = $row['photo'];
+
+        // Update data based on ID and sketch type
+        $updateSql = "UPDATE $sketchType SET name = '$newName', feature = '$newfeature', price='$newPrice', photo='$destfile' WHERE id = $id";
+        
+        if ($conn->query($updateSql) === TRUE) {
+            echo '<script>swal("Good job!", "Successfully Updated!", "success");</script>';
+            header("Location: sketchdetail.php?sketchType=$sketchType");
+        } else {
+            echo '<script>swal("Oops!", "Something went wrong, Retry Again!", "error");</script>';
+        }
+    } 
+
 }
 ?>
 <!DOCTYPE html>
@@ -47,7 +60,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <title>Edit Item</title>
     <!-- Include Bootstrap CSS -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+    /* Optional custom CSS styles */
+    .container1
+    {
+      max-width: 600px;
+      margin: 0 auto;
+      margin-top: 40px;
+      margin-bottom:90px;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #fff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    </style>
+    
 </head>
 
 <body>
@@ -55,7 +85,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     require_once('adminheader.php');
 
     ?>
-    <div class="container">
+    <div class="container1">
         <h2>Edit Item</h2>
         <form method="post" enctype="multipart/form-data">
             <div class="form-group">
@@ -63,7 +93,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <input type="text" class="form-control" id="new_name" name="new_name" value="<?php echo $row['name']; ?>">
             </div>
             <div class="form-group">
-                <label for="new_description">Description:</label>
+                <label for="new_description">Feature:</label>
                 <textarea class="form-control" id="new_description" name="new_feature"><?php echo $row['feature']; ?></textarea>
             </div>
             <div class="form-group">
@@ -76,6 +106,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                  <img src="<?php echo $row['photo']; ?>" alt="Current Image" style="max-width: 100px;"><br>
                  <?php } ?>
                  <input type="file" class="form-control" id="new_image" name="new_image">
+                 <label>Current File: <?php echo $row['photo']; ?></label>
             </div>
             
             <button type="submit" class="btn btn-primary">Update</button>
