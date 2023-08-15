@@ -29,14 +29,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if ($result->num_rows > 0) {
             $row = $result->fetch_assoc();
+            $pass=$row['password'];//Fetch From Database
             
 
             // Verify the password
-            if ($password==$row['password']) {
+            if (password_verify($password, $pass))  {
                 // Password is correct
+                echo "<h2>Login Successful!</h2>";
                 header("Location: userdashboard.php");
                 // Redirect to the dashboard or perform further actions
-                echo "<h2>Login Successful!</h2>";
+                
                 echo "<p>Welcome, " . $row['name'] . "!</p>";
             } else {
                 // Password is incorrect
@@ -128,8 +130,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
         <button type="submit" class="btn btn-primary" name="submit">Login</button>
       </form>
-      <p class="text-center">Don't have an account? <a href="http://localhost/final/registration.php">Sign up</a></p>
-      <p class="text-center"><a href="http://localhost/final/forgot_password.php">Forgot Password</a></p>
+      <p class="text-center">Don't have an account? <a href="registration.php">Sign up</a></p>
+      <p class="text-center"><a href="forgot_password.php">Forgot Password</a></p>
     </div>
   </div>
 

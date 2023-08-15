@@ -58,6 +58,7 @@ function sendOTP($email, $otp) {
     $address = $_POST['address'];
     $password = $_POST['password'];
     $confirm_password=$_POST['confirm_password'];
+    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
     // $confirm_password = $_POST['confirm_password'];
     // $_SESSION['email1']=$_POST['email1'];
     // $_SESSION['name']=$_POST['name'];
@@ -104,6 +105,7 @@ function sendOTP($email, $otp) {
         $_SESSION['address'] = $_POST['address'];
         $_SESSION['password'] = $_POST['password'];
         $_SESSION['otp'] = $otp;
+        $_SESSION['hpassword'] = $hashedPassword;
         
 
         // $sql = "INSERT INTO `register` (`name`, `email`, `phone`, `address`, `password`, `otp`) VALUES ('$name', '$email', '$phone', '$address', '$password', '$otp');";

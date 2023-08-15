@@ -83,7 +83,7 @@ while ($row = mysqli_fetch_assoc($result)) {
        
       </div>
       <div class="text-center mt-3">
-      <a href="http://localhost/final/allpencil.php"><button class="btn btn-primary" id="showMoreBtn">Show More</button></a>
+      <a href="allpencil.php"><button class="btn btn-primary" id="showMoreBtn">Show More</button></a>
     </div>
     </div>
     <?php
@@ -129,7 +129,7 @@ while ($row1 = mysqli_fetch_assoc($result1)) {
        
       </div>
       <div class="text-center mt-3">
-      <a href="http://localhost/final/acryliccard.php"><button class="btn btn-primary" id="showMoreBtn">Show More</button></a>
+      <a href="acryliccard.php"><button class="btn btn-primary" id="showMoreBtn">Show More</button></a>
     </div>
     </div>
     <?php
@@ -175,7 +175,7 @@ while ($row2 = mysqli_fetch_assoc($result2)) {
        
       </div>
       <div class="text-center mt-3">
-      <a href="http://localhost/final/canvas.php"><button class="btn btn-primary" id="showMoreBtn">Show More</button></a>
+      <a href="canvas.php"><button class="btn btn-primary" id="showMoreBtn">Show More</button></a>
     </div>
     </div>
 
@@ -222,7 +222,7 @@ while ($row3 = mysqli_fetch_assoc($result3)) {
        
       </div>
       <div class="text-center mt-3">
-      <a href="http://localhost/final/canvas.php"><button class="btn btn-primary" id="showMoreBtn">Show More</button></a>
+      <a href="nature.php"><button class="btn btn-primary" id="showMoreBtn">Show More</button></a>
     </div>
     </div>
 </body>

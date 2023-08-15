@@ -55,6 +55,8 @@ function sendOTP($email2, $otp1) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Forgot Password</title>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
     body {
@@ -114,14 +116,30 @@ function sendOTP($email2, $otp1) {
   
 
   if (isset($_POST['submit'])) {
-      $email2 = $_POST['email2'];
-      $_SESSION['email2'] = $_POST['email2'];
-      $otp1 = generateOTP();
-      sendOTP($email2, $otp1);
-      $_SESSION['otp1'] = $otp1;
-      header("location:forgot-verify.php");
-      exit; // Add this line to stop script execution after the header redirect
+        $email2 = $_POST['email2'];
+        // $_SESSION['email2'] = $_POST['email2'];
+        $checkEmailQuery = "SELECT * FROM register WHERE email = '$email2'";
+        $result = $conn->query($checkEmailQuery);
+        
+        
+    if ($result->num_rows > 0) {
+            // User with the same email already exists
+            $otp1 = generateOTP();
+            sendOTP($email2, $otp1);
+            $_SESSION['otp1'] = $otp1;
+            header("location:forgot-verify.php");
+            // echo '<div class="error-message"><h4>Registration Failed:</h4>';
+            // echo '<p>A user with the same email address already exists. Please try with another email address.</p></div>';
+    }
+    else{
+      
+      
+      // Add this line to stop script execution after the header redirect
+      echo '<script>swal("Oops!", "This Email Address does not exits !", "error");</script>';
+
   }
+}
+
   ob_end_flush();
   ?>
  

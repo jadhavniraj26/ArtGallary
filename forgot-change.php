@@ -61,7 +61,7 @@ session_start();
       <button type="submit" name="submit" class="btn btn-primary btn-block">Submit</button>
     </form>
     <br>
-    <center><a href="http://localhost/final/userlogin.php">Back to Login</a></center>
+    <center><a href="userlogin.php">Back to Login</a></center>
   </div>
   
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -79,10 +79,11 @@ if (isset($_POST['submit']))
 {
     $email2 = $_SESSION['email2'];
     $password=$_POST['password'];
+    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
     $cpassword=$_POST['cpassword'];
     if($password==$cpassword)
     {
-        $sql="UPDATE `register` SET `password`='$password' WHERE email='$email2';";
+        $sql="UPDATE `register` SET `password`='$hashedPassword' WHERE email='$email2';";
         mysqli_query($conn,$sql);
         echo '<script>swal("Good job!", "Password Updated Successfully!", "success");</script>';
     }

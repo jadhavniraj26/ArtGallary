@@ -36,24 +36,22 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="http://localhost/final/card.php">Home</a>
+                        <a class="nav-link" href="index.php">Home</a>
                     </li>
                     <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="sketchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Types of Sketches
                     </a>
                     <div class="dropdown-menu" aria-labelledby="sketchDropdown">
-                        <a class="dropdown-item" href="http://localhost/final/allpencil.php">Pencil Sketch</a>
-                        <a class="dropdown-item" href="http://localhost/final/acryliccard.php">Acrylic Sketch</a>
-                        <a class="dropdown-item" href="http://localhost/final/nature.php">Nature Paintings</a>
-                        <a class="dropdown-item" href="http://localhost/final/canvas.php">Canvas Paintings</a>
+                        <a class="dropdown-item" href="allpencil.php">Pencil Sketch</a>
+                        <a class="dropdown-item" href="acryliccard.php">Acrylic Sketch</a>
+                        <a class="dropdown-item" href="nature.php">Nature Paintings</a>
+                        <a class="dropdown-item" href="canvas.php">Canvas Paintings</a>
                     </div>
                 </li>
-                <li class="nav-item">
-                        <a class="nav-link" href="http://localhost/final/reachus.php"><i class="fa fa-contact" style="font-size:30px;color:red"></i></a>
-                    </li>
+               
                     <li class="nav-item">
-                        <a class="nav-link" href="http://localhost/final/reachus.php"><i class="fa fa-address-book" style="font-size:30px;color:red"></i>
+                        <a class="nav-link" href="reachus.php"><i class="fa fa-address-book" style="font-size:30px;color:red"></i>
 </a>
                     </li>
                     
@@ -66,8 +64,8 @@
                     <a class="nav-link dropdown-toggle" href="#" id="sketchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user" style="font-size:30px;color:red"></i>
 </a>
                         <div class="dropdown-menu" aria-labelledby="sketchDropdown">
-                        <a class="dropdown-item" href="http://localhost/final/userlogin.php">User Login</a>
-                        <a class="dropdown-item" href="http://localhost/final/addproduct.php">Admin Login</a>
+                        <a class="dropdown-item" href="userlogin.php">User Login</a>
+                        <a class="dropdown-item" href="addproduct.php">Admin Login</a>
                         </div>
                 </li>
                     

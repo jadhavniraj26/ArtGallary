@@ -71,11 +71,12 @@ if (isset($_POST['verify'])) {
     $address = $_SESSION['address'];
     $password = $_SESSION['password'];
     $otp=$_SESSION['otp'];
+    $hpassword=$_SESSION['hpassword'];
     // echo $otp;
     
         // Step 4: Compare the entered OTP with the stored OTP
         if ($enteredOTP == $otp) {
-          $sql = "INSERT INTO `register` (`name`, `email`, `phone`, `address`, `password`, `otp`) VALUES ('$name', '$email1', '$phone', '$address', '$password', '$otp');";
+          $sql = "INSERT INTO `register` (`name`, `email`, `phone`, `address`, `password`, `otp`) VALUES ('$name', '$email1', '$phone', '$address', '$hpassword', '$otp');";
         
           $result = $conn->query($sql);
           if($result)
